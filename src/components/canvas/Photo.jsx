@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { profile } from "../assets";
 
 const Photo = () => {
   return (
@@ -34,7 +35,8 @@ const Photo = () => {
           transition={{ delay: 2.4, duration: 0.4, ease: "easeInOut" }}
           className="w-[260px] h-[260px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] xl:w-[500px] xl:h-[500px] rounded-full overflow-hidden mix-blend-lighten"
         >
-          <img src="./src/assets/Denny.png" alt="Denny" className="object-cover w-full h-full" />
+          {/* <img src="./src/assets/Denny.png" alt="Denny" className="object-cover w-full h-full" /> */}
+          <img src={profile} alt="Denny" className="object-cover w-full h-full" />
         </motion.div>
       </motion.div>
     </div>
