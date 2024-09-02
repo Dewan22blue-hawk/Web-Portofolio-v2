@@ -21,7 +21,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Mobile Developer",
     icon: mobile,
   },
   {
@@ -29,7 +29,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "IT Support",
     icon: creator,
   },
 ];
@@ -91,7 +91,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
+    title: "React.js ",
     company_name: "Starbucks",
     icon: starbucks,
     iconBg: "#383E56",
@@ -147,38 +147,38 @@ const experiences = [
 const testimonials = [
   {
     testimonial: "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+    name: "Wahyu Trie",
+    designation: "Friend Team",
+    company: "Hawk's",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial: "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+    name: "Falah Anugerah",
+    designation: "Network Administrator Team",
+    company: "Privy ID",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial: "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+    name: "Nanda AJx",
+    designation: "Staff",
+    company: "PLN BUMN",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Report Desk App",
     description: "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
       {
-        name: "react",
+        name: "Codeigniter 4",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "PHP Code",
         color: "green-text-gradient",
       },
       {
@@ -187,47 +187,51 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/hawk-xc/CI4-spark/tree/master/report_desk_wapl",
   },
   {
-    name: "Job IT",
-    description: "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    name: "Stasiun Roti",
+    description: "Web application that enables users to search for Bakeries, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
-        name: "react",
+        name: "HTML 5",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "CSS 3",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Bootstrap",
         color: "pink-text-gradient",
+      },
+      {
+        name: "JQuery",
+        color: "blue-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Dewan22blue-hawk/website-kelompok",
   },
   {
-    name: "Trip Guide",
+    name: "Servikom Apps",
     description: "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "Laravel",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Flutter",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Tailwind",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/hawk-xc/Laradev_e_antrean",
   },
 ];
 

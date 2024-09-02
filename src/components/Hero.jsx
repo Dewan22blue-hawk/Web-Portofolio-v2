@@ -51,6 +51,9 @@ const Hero = () => {
             <br className="hidden sm:block" />
             <span className="block cursor">| Keep "Hello World"</span>
           </p>
+          <a data-aos="zoom-in" href="/cv-denny-irawan.pdf" download className="mt-4 inline-block px-6 py-3 bg-[#915eff] max-[360px]:text-sm text-white rounded-md text-lg font-semibold">
+            Download My CV
+          </a>
         </div>
       </div>
       {/* <ComputersCanvas /> */}
