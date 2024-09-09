@@ -1,4 +1,4 @@
-import { mobile, backend, creator, web, javascript, typescript, html, css, reactjs, tailwind, nodejs, mongodb, git, figma, codeigniter, meta, starbucks, tesla, shopify, carrent, jobit, tripguide, php, laravel } from "../assets";
+import { mobile, backend, creator, web, javascript, typescript, html, css, reactjs, tailwind, nodejs, mongodb, git, figma, codeigniter, sagitaNet, ubsi, carrent, stasiunRoti, laradev, php, laravel, mobileApp } from "../assets";
 
 export const navLinks = [
   {
@@ -8,6 +8,14 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "certificate",
+    title: "Certificate",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -91,55 +99,30 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js ",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Network Engineer Technician",
+    company_name: "Sedjajar.net",
+    icon: sagitaNet,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "March 2020 - May 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Installation and Configuration: Oversee the installation of network hardware and software components, such as routers, switches, access points, and fiber optic equipment, ensuring all systems are configured correctly and efficiently.",
+      "Troubleshooting and Maintenance: Proactively monitor network performance and resolve complex technical issues, minimizing downtime and ensuring uninterrupted service for end-users.",
+      "Documentation and Reporting: Maintain detailed records of network configurations, installations, and maintenance activities to ensure transparency and facilitate ongoing network management.",
+      "Client Consultation and Support: Collaborate closely with clients to understand their networking requirements, provide expert recommendations, and deliver comprehensive support throughout the entire project lifecycle.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
+    title: "Assistant Technical Support",
+    company_name: "Bina Sarana Informatika University",
+    icon: ubsi,
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Network Configuration and Installation: Assisted in setting up and configuring network devices, including routers, switches, and access points, to optimize connectivity and performance.",
+      "Technical Troubleshooting: Provided first-line support by diagnosing and resolving issues related to hardware, software, and network components, ensuring minimal disruption to users.",
+      "CCTV and Network Installation: Supported the installation and maintenance of CCTV systems, including configuring cameras and ensuring secure network integration.",
+      "Hardware and Software Maintenance: Performed regular maintenance tasks, including software updates, hardware repairs, and system optimizations, to maintain operational efficiency.",
+      "User Support: Actively assisted end-users with their daily technical needs, including troubleshooting software and hardware issues, providing guidance on web applications, and supporting basic programming tasks.",
+      "Collaborative Problem-Solving: Worked closely with the technical support team to identify recurring issues, develop solutions, and implement best practices for enhanced system performance.",
     ],
   },
 ];
@@ -150,21 +133,21 @@ const testimonials = [
     name: "Wahyu Trie",
     designation: "Friend Team",
     company: "Hawk's",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://randomuser.me/api/portraits/men/4.jpg",
   },
   {
     testimonial: "I've never met a web developer who truly cares about their clients' success like Rick does.",
     name: "Falah Anugerah",
     designation: "Network Administrator Team",
     company: "Privy ID",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
     testimonial: "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Nanda AJx",
     designation: "Staff",
     company: "PLN BUMN",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "https://randomuser.me/api/portraits/men/6.jpg",
   },
 ];
 
@@ -191,7 +174,8 @@ const projects = [
   },
   {
     name: "Stasiun Roti",
-    description: "Web application that enables users to search for Bakeries, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    description:
+      "Landing page for Stasiun Roti, a bakery in Surakarta, showcasing their range of freshly baked goods. The site features an elegant and user-friendly design, highlighting the bakery’s offerings, values, and atmosphere, with responsive design to provide a seamless experience across all devices.",
     tags: [
       {
         name: "HTML 5",
@@ -210,19 +194,19 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: jobit,
+    image: stasiunRoti,
     source_code_link: "https://github.com/Dewan22blue-hawk/website-kelompok",
   },
   {
-    name: "Servikom Apps",
+    name: "Laradev E-Antrean Web Apps",
     description: "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "Laravel",
+        name: "Laravel-API",
         color: "blue-text-gradient",
       },
       {
-        name: "Flutter",
+        name: "Laravel-Livewire",
         color: "green-text-gradient",
       },
       {
@@ -230,8 +214,20 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: laradev,
     source_code_link: "https://github.com/hawk-xc/Laradev_e_antrean",
+  },
+  {
+    name: "Mobile Apps E-Antrean",
+    description: "This project is a continuation of Laradev E-Antrean, where the application is integrated with Mobile Apps made using Flutter using Laravel Sanctum APIs.",
+    tags: [
+      {
+        name: "Flutter",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: mobileApp,
+    source_code_link: "https://github.com/hawk-xc/Flutter_e_antrean",
   },
 ];
 

@@ -2,15 +2,15 @@
 const ModalBox = ({ modalData }) => {
   return (
     <dialog id="my_modal" className="modal">
-      <form method="dialog" className="modal-box">
+      <form method="dialog" className="modal-box bg-black-200">
         <p className="flex flex-row gap-2 font-bold max-sm:text-lg md:text-3xl">
           <i className={modalData?.icon}></i>
-          <span className="text-warning">{modalData?.name}</span>
+          <span className="text-[#915eff]">{modalData?.name}</span>
         </p>
         <ul className="flex flex-col gap-2 py-4 overflow-y-scroll">
           {modalData?.items.map((item) => (
             <li key={item.name}>
-              <div className="collapse bg-base-200">
+              <div className="collapse bg-base-100">
                 <input type="radio" name="my-accordion-1" />
                 <div className="text-xl font-medium text-white collapse-title">{item.name}</div>
                 <div className="collapse-content">

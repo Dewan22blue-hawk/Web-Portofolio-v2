@@ -28,11 +28,15 @@ import codeigniter from "./tech/codeigniter.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
+import sagitaNet from "./company/sagitaNet.png";
 import tesla from "./company/tesla.png";
-
+import ubsi from "./company/ubsi.png";
 import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+// import jobit from "./jobit.png";
+import stasiunRoti from "./stasiunRoti.png";
+import mobileApp from "./mobileApp.png";
+import laradev from "./laradev.jpg";
+// import tripguide from "./tripguide.png";
 
 export {
   logo,
@@ -60,10 +64,15 @@ export {
   meta,
   shopify,
   starbucks,
+  ubsi,
   tesla,
   carrent,
-  jobit,
-  tripguide,
+  // jobit,
+  sagitaNet,
+  stasiunRoti,
+  laradev,
+  mobileApp,
+  // tripguide,
   codeigniter,
   profil,
 };

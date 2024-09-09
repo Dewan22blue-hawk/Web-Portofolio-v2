@@ -36,9 +36,10 @@ const Contact = () => {
       "template_nip7cre",
       {
         from_name: form.name,
-        to_name: "Adrian",
-        form_email: form.email,
-        to_email: "contact@dwn.dev.com",
+        to_name: "Denny",
+        // form_email: form.email,
+        from_email: form.email,
+        to_email: "dennyirawan170204@gmail.com",
         message: form.message,
       },
       "G6KUjGBBh3D_hv76H"
