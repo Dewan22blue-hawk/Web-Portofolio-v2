@@ -1,5 +1,5 @@
-import { SectionWrapper } from "../hoc";
-import { navLinks } from "../constants";
+import { SectionWrapper } from '../hoc';
+import { navLinks } from '../constants';
 
 const ContactFoot = () => {
   return (
@@ -20,16 +20,16 @@ const ContactFoot = () => {
         </div>
       </div>
       <div className="text-secondary md:text-6xl max-sm:text-4xl md:mt-5 max-sm:mt-10 max-sm:gap-3 max-sm:flex max-sm:flex-row" data-aos="zoom-in-up">
-        <a href="https://www.linkedin.com/in/denny-irawan22">
+        <a target="_blank" href="https://www.linkedin.com/in/denny-irawan22">
           <i className="ri-linkedin-box-fill hover:text-[#915eff]"></i>
         </a>
-        <a href="https://www.instagram.com/de.wan_22/">
+        <a target="_blank" href="https://www.instagram.com/de.wan_22/">
           <i className="ri-instagram-fill hover:text-[#915eff]"></i>
         </a>
-        <a href="https://github.com/Dewan22blue-hawk">
+        <a target="_blank" href="https://github.com/Dewan22blue-hawk">
           <i className="ri-github-fill hover:text-[#915eff]"></i>
         </a>
-        <a href="https://wa.me/6285237545993">
+        <a target="_blank" href="https://wa.me/6285237545993">
           <i className="ri-whatsapp-fill hover:text-[#915eff]"></i>
         </a>
       </div>
@@ -49,4 +49,4 @@ const ContactFoot = () => {
     </div>
   );
 };
-export default SectionWrapper(ContactFoot, "");
+export default SectionWrapper(ContactFoot, '');
