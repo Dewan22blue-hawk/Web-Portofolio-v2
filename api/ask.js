@@ -1,25 +1,11 @@
-// File: api/ask.js
-
-// Impor library Google Generative AI
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-// Penting: Gunakan variabel lingkungan untuk API Key Anda di produksi.
-// Di Vercel, Anda bisa menambahkannya di pengaturan proyek sebagai GEMINI_API_KEY.
-// Contoh: process.env.GEMINI_API_KEY
-// Untuk pengembangan lokal dengan `vercel dev`, Anda bisa membuat file .env.local
-// di root proyek dengan GEMINI_API_KEY="YOUR_GEMINI_API_KEY_DI_SINI"
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'YOUR_GEMINI_API_KEY_DI_SINI'; // Ganti ini dengan API key Anda jika tidak menggunakan variabel lingkungan (hanya untuk testing lokal)
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'YOUR_GEMINI_API_KEY_DI_SINI';
 
-// Inisialisasi Google Generative AI
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
-// Pilih model Gemini yang akan digunakan. 'gemini-pro' atau 'gemini-1.5-flash' adalah pilihan yang baik.
-// 'gemini-pro' umumnya memberikan kualitas lebih baik, 'gemini-1.5-flash' lebih cepat dan murah.
-const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
-// Data CV Denny Irawan yang sudah terstruktur
-// Ini akan menjadi konteks utama bagi chatbot.
-// Pastikan ini adalah string JavaScript yang valid.
 const denny_irawan_structured_data = `
 **Informasi Profil Denny Irawan:**
 -   **Nama Lengkap:** Denny Irawan
@@ -27,7 +13,7 @@ const denny_irawan_structured_data = `
 -   **Lokasi:** Surakarta, Central Java
 -   **LinkedIn:** linkedin.com/in/denny-irawan22
 -   **Nomor Telepon:** +62 852 3754 5993
--   **Website Portofolio:** https://dennyirawan.my.id
+-   **Website Portofolio:** https:
 -   **GitHub:** github.com/Dewan22blue-hawk
 -   **Ringkasan Profil:** Seorang profesional IT yang proaktif dan serbaguna dengan pengalaman praktis dalam dukungan teknis, administrasi jaringan, dan pemrograman. Memiliki fondasi yang kuat dalam manajemen infrastruktur cloud, dengan keahlian yang berkembang dalam layanan Google Cloud Platform (GCP), termasuk menerapkan solusi yang skalabel, mengotomatisasi alur kerja, dan mengoptimalkan konfigurasi jaringan untuk lingkungan cloud. Latar belakang dalam pemecahan masalah, optimasi sistem, dan administrasi jaringan memposisikan saya untuk secara efektif mengelola aplikasi berbasis cloud, memastikan kinerja dan keamanan tinggi.
 
@@ -81,22 +67,17 @@ const denny_irawan_structured_data = `
 -   Certificate of Competency Software Quality Assurance (SQA) PT. Tanjung Mulia Informatika
 `;
 
-// Handler utama untuk Serverless Function
 export default async function handler(req, res) {
-  // Hanya izinkan metode POST untuk permintaan chatbot
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Metode Tidak Diizinkan' });
   }
 
-  // Ambil pertanyaan dari body permintaan JSON
   const { question } = req.body;
 
-  // Validasi jika pertanyaan tidak disediakan
   if (!question) {
     return res.status(400).json({ error: 'Pertanyaan tidak disediakan.' });
   }
 
-  // Buat prompt untuk model Gemini
   const prompt = `
     Anda adalah asisten virtual saya, yakni Denny Irawan. Anda hanya boleh menjawab pertanyaan berdasarkan informasi yang diberikan dalam data di bawah ini. Jika informasi tidak tersedia di sini, katakan bahwa Anda tidak memiliki informasi tersebut. Jangan membuat-buat jawaban atau menambahkan informasi dari luar data berikut kecuali menambahkan sedikit penjelasan mengenai skill-skill yang saya punya di data tersebut. Jawaban harus singkat, padat, dan langsung ke intinya dan ganti agar kata ganti 'dia' menjadi 'saya' untuk menggantikan saya denny irawan.
 
@@ -111,15 +92,12 @@ export default async function handler(req, res) {
   `;
 
   try {
-    // Panggil model Gemini untuk menghasilkan konten
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    const text = response.text(); // Ambil teks jawaban dari respons
+    const text = response.text();
 
-    // Kirim jawaban kembali ke frontend
     res.status(200).json({ answer: text });
   } catch (error) {
-    // Tangani kesalahan jika ada masalah dengan API Gemini atau lainnya
     console.error('Kesalahan saat menghasilkan konten dari model AI:', error);
     res.status(500).json({ error: 'Gagal mendapatkan respons dari model AI.' });
   }
