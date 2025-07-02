@@ -1,6 +1,8 @@
 import {
   mobile,
   backend,
+  docker,
+  flask,
   creator,
   web,
   reportdesk,
@@ -120,6 +122,14 @@ const technologies = [
   {
     name: 'codeigniter',
     icon: codeigniter,
+  },
+  {
+    name: 'docker',
+    icon: docker,
+  },
+  {
+    name: 'flask',
+    icon: flask,
   },
 ];
 

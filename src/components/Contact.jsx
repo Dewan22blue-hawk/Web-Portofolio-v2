@@ -1,13 +1,12 @@
-import React from "react";
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
 // import { emailjs } from "@emailjs/browser";
-import { send } from "@emailjs/browser";
+import { send } from '@emailjs/browser';
 
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
+import { styles } from '../styles';
+import { EarthCanvas } from './canvas';
+import { SectionWrapper } from '../hoc';
+import { slideIn } from '../utils/motion';
 
 // G6KUjGBBh3D_hv76H
 // template_nip7cre
@@ -16,9 +15,9 @@ import { slideIn } from "../utils/motion";
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
@@ -32,45 +31,45 @@ const Contact = () => {
 
     // Send email using emailjs
     send(
-      "service_maeevei",
-      "template_nip7cre",
+      'service_maeevei',
+      'template_nip7cre',
       {
         from_name: form.name,
-        to_name: "Denny",
+        to_name: 'Denny',
         // form_email: form.email,
         from_email: form.email,
-        to_email: "dennyirawan170204@gmail.com",
+        to_email: 'dennyirawan170204@gmail.com',
         message: form.message,
       },
-      "G6KUjGBBh3D_hv76H"
+      'G6KUjGBBh3D_hv76H'
     )
       .then((response) => {
         setLoading(false);
-        alert("Message sent successfully! Thank You. I will get back to you as soon as possible.");
+        alert('Message sent successfully! Thank You. I will get back to you as soon as possible.');
         setForm({
-          name: "",
-          email: "",
-          message: "",
+          name: '',
+          email: '',
+          message: '',
         });
       })
       .catch((error) => {
         setLoading(false);
 
-        console.error("FAILED...", error);
-        alert("Failed to send message. Please try again later.");
+        console.error('FAILED...', error);
+        alert('Failed to send message. Please try again later.');
       });
 
     setForm({
-      name: "",
-      email: "",
-      message: "",
+      name: '',
+      email: '',
+      message: '',
     });
     setLoading(false);
   };
 
   return (
     <div className="flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row">
-      <motion.div variants={slideIn("left", "tween", 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
+      <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
         <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8 mt-12">
@@ -102,15 +101,15 @@ const Contact = () => {
             />
           </label>
           <button type="submit" className="px-8 py-3 font-bold text-white shadow-md outline-none bg-tertiary rounded-xl w-fit shadow-primary">
-            {loading ? "Sending..." : "Send"}
+            {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
       </motion.div>
-      <motion.div variants={slideIn("right", "tween", 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+      <motion.div variants={slideIn('right', 'tween', 0.2, 1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
         <EarthCanvas></EarthCanvas>
       </motion.div>
     </div>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, 'contact');
