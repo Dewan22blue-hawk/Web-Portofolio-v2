@@ -38,8 +38,8 @@ const App = () => {
           <Contact />
           <StarsCanvas />
           {/* <Footer /> */}
-          <ContactFoot />
           <Chatbot />
+          <ContactFoot />
           <Footer />
         </div>
       </div>
