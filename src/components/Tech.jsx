@@ -101,7 +101,7 @@ const LiquidTechBubble = ({ technology, index }) => {
               alt={technology.name}
               loading="lazy"
               draggable={false}
-              className="w-full h-full object-contain drop-shadow-[0_6px_12px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-full object-contain rounded-lg drop-shadow-[0_6px_12px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover:scale-110"
             />
           </div>
         </motion.div>

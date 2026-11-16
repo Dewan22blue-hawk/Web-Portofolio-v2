@@ -21,10 +21,22 @@ import reactjs from './tech/reactjs.png';
 import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
 import typescript from './tech/typescript.png';
-// import threejs from "./tech/threejs.svg";
+import threejs from './tech/threejs.svg';
 import php from './tech/php.png';
 import laravel from './tech/laravel.png';
 import codeigniter from './tech/codeigniter.png';
+import alibaba from './tech/alibaba.png';
+import ciscoacademy from './tech/ciscoacademy.png';
+import express from './tech/express.png';
+import flutter from './tech/flutter.png';
+import gcp from './tech/gcp.png';
+import githubTech from './tech/github.png';
+import googlecloud from './tech/googlecloud.png';
+import mikrotik from './tech/mikrotik.png';
+import n8n from './tech/n8n.png';
+import nextjs from './tech/nextjs.png';
+import python from './tech/python.png';
+import tensorflow from './tech/tensorflow.jpeg';
 
 import meta from './company/meta.png';
 import shopify from './company/shopify.png';
@@ -82,5 +94,18 @@ export {
   mobileApp,
   // tripguide,
   codeigniter,
+  threejs,
+  alibaba,
+  ciscoacademy,
+  express,
+  flutter,
+  gcp,
+  githubTech,
+  googlecloud,
+  mikrotik,
+  n8n,
+  nextjs,
+  python,
+  tensorflow,
   profil,
 };

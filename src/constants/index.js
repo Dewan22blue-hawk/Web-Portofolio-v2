@@ -26,6 +26,20 @@ import {
   php,
   laravel,
   mobileApp,
+  redux,
+  threejs,
+  alibaba,
+  ciscoacademy,
+  express,
+  flutter,
+  gcp,
+  githubTech,
+  googlecloud,
+  mikrotik,
+  n8n,
+  nextjs,
+  python,
+  tensorflow,
 } from '../assets';
 
 export const navLinks = [
@@ -130,6 +144,62 @@ const technologies = [
   {
     name: 'flask',
     icon: flask,
+  },
+  {
+    name: 'Next.js',
+    icon: nextjs,
+  },
+  {
+    name: 'Express JS',
+    icon: express,
+  },
+  {
+    name: 'Redux',
+    icon: redux,
+  },
+  {
+    name: 'Three.js',
+    icon: threejs,
+  },
+  {
+    name: 'Python',
+    icon: python,
+  },
+  {
+    name: 'Flutter',
+    icon: flutter,
+  },
+  {
+    name: 'TensorFlow',
+    icon: tensorflow,
+  },
+  {
+    name: 'GitHub',
+    icon: githubTech,
+  },
+  {
+    name: 'Google Cloud',
+    icon: googlecloud,
+  },
+  {
+    name: 'GCP',
+    icon: gcp,
+  },
+  {
+    name: 'Alibaba Cloud',
+    icon: alibaba,
+  },
+  {
+    name: 'MikroTik',
+    icon: mikrotik,
+  },
+  {
+    name: 'Cisco Academy',
+    icon: ciscoacademy,
+  },
+  {
+    name: 'n8n',
+    icon: n8n,
   },
 ];
 
