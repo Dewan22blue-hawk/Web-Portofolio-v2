@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Download, ArrowRight } from "lucide-react";
 import { HeroLanyardCard } from "@/components/ui/hero-lanyard-card";
+import { GalaxyMeteors } from "@/components/ui/galaxy-meteors";
 import profile from "../assets/dennyirawan.png";
 
 const texts = [
@@ -15,10 +16,23 @@ const texts = [
 ];
 
 const Hero = () => {
+  const heroRef = useRef(null);
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  const leftY = useTransform(scrollYProgress, [0, 1], [0, -70]);
+  const leftOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const rightY = useTransform(scrollYProgress, [0, 1], [0, 50]);
+  const rightScale = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
+  const rightOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  const indicatorOpacity = useTransform(scrollYProgress, [0, 0.18], [1, 0]);
 
   useEffect(() => {
     const currentTarget = texts[textIndex];
@@ -43,13 +57,23 @@ const Hero = () => {
   }, [charIndex, isDeleting, textIndex]);
 
   return (
-    <section id="hero" className="relative w-full min-h-screen flex items-center justify-center pt-28 pb-24 sm:pt-32 sm:pb-32 overflow-hidden bg-primary text-white">
+    <section
+      ref={heroRef}
+      id="hero"
+      className="relative w-full min-h-screen flex items-center justify-center pt-28 pb-24 sm:pt-32 sm:pb-32 overflow-hidden bg-[#050816] text-white"
+    >
+      {/* Galaxy Stars & Shooting Meteors Background */}
+      <GalaxyMeteors starCount={75} meteorCount={10} />
+
       {/* Background soft ambient radial gradient */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-600/10 blur-[130px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-600/10 blur-[130px] rounded-full pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10">
         {/* Kolom Kiri: Bio & CTAs */}
-        <div className="lg:col-span-7 flex flex-col items-start justify-center text-left">
+        <motion.div
+          style={{ y: leftY, opacity: leftOpacity }}
+          className="lg:col-span-7 flex flex-col items-start justify-center text-left"
+        >
           {/* Status Badge */}
           <motion.div
             initial={{ opacity: 0, y: -16 }}
@@ -127,10 +151,13 @@ const Hero = () => {
               <span>Download CV</span>
             </a>
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Kolom Kanan: Interactive Draggable Lanyard Card */}
-        <div className="lg:col-span-5 flex items-center justify-center relative w-full mt-2 lg:mt-0">
+        <motion.div
+          style={{ y: rightY, scale: rightScale, opacity: rightOpacity }}
+          className="lg:col-span-5 flex items-center justify-center relative w-full mt-2 lg:mt-0"
+        >
           <HeroLanyardCard
             name="Denny Irawan, S.Kom"
             role="Full Stack Developer & IT Specialist"
@@ -144,11 +171,14 @@ const Hero = () => {
             ]}
             idNumber="DEV-2024-081"
           />
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll Mouse Indicator di Bagian Tengah Bawah */}
-      <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-2 z-20">
+      <motion.div
+        style={{ opacity: indicatorOpacity }}
+        className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-2 z-20"
+      >
         <a href="#about" aria-label="Scroll to About section">
           <div className="w-[28px] h-[48px] rounded-full border-2 border-slate-500/40 hover:border-sky-400 flex justify-center items-start p-1.5 backdrop-blur-sm bg-slate-900/30 transition-colors">
             <motion.div
@@ -166,7 +196,7 @@ const Hero = () => {
             />
           </div>
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 };
