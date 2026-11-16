@@ -86,15 +86,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="fixed top-3 sm:top-5 inset-x-0 mx-auto z-40 flex items-center justify-center px-3 sm:px-4 pointer-events-none">
-      <div className="pointer-events-auto flex items-center gap-1.5 sm:gap-2.5 p-1 sm:p-1.5 rounded-full backdrop-blur-md bg-slate-900/60 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.45)] transition-all">
+    <header className="fixed bottom-4 top-auto sm:top-5 sm:bottom-auto inset-x-0 mx-auto z-40 flex items-center justify-center px-3 sm:px-4 pointer-events-none">
+      <div className="pointer-events-auto flex items-center gap-1.5 sm:gap-2.5 p-1.5 rounded-full backdrop-blur-md bg-slate-900/75 sm:bg-slate-900/60 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.55)] transition-all">
         <Link
           to="/"
           onClick={() => {
             setActiveIndex(0);
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="flex items-center gap-2 pl-2 pr-2.5 py-1 rounded-full hover:bg-white/5 transition-colors group"
+          className="hidden sm:flex items-center gap-2 pl-2 pr-2.5 py-1 rounded-full hover:bg-white/5 transition-colors group"
           aria-label="Denny Irawan Home"
         >
           <div className="w-8 h-8 rounded-full overflow-hidden border border-blue-500/30 group-hover:border-sky-400/80 transition-colors bg-slate-800/80 flex items-center justify-center shadow-inner">

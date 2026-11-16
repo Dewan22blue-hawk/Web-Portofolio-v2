@@ -60,7 +60,7 @@ const Hero = () => {
     <section
       ref={heroRef}
       id="hero"
-      className="relative w-full min-h-screen flex items-center justify-center pt-28 pb-24 sm:pt-32 sm:pb-32 overflow-hidden bg-[#050816] text-white"
+      className="relative w-full min-h-screen flex items-center justify-center pt-14 pb-28 sm:pt-32 sm:pb-32 overflow-hidden bg-[#050816] text-white"
     >
       {/* Galaxy Stars & Shooting Meteors Background */}
       <GalaxyMeteors starCount={75} meteorCount={10} />
@@ -174,10 +174,10 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Scroll Mouse Indicator di Bagian Tengah Bawah */}
+      {/* Scroll Mouse Indicator di Bagian Tengah Bawah (desktop/tablet) */}
       <motion.div
         style={{ opacity: indicatorOpacity }}
-        className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-2 z-20"
+        className="hidden sm:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center justify-center gap-2 z-20"
       >
         <a href="#about" aria-label="Scroll to About section">
           <div className="w-[28px] h-[48px] rounded-full border-2 border-slate-500/40 hover:border-sky-400 flex justify-center items-start p-1.5 backdrop-blur-sm bg-slate-900/30 transition-colors">
