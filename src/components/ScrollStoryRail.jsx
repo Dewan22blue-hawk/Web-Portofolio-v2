@@ -11,9 +11,10 @@ const ScrollStoryRail = () => {
       { id: "hero", num: "01", label: t.chapters.hero },
       { id: "about", num: "02", label: t.chapters.about },
       { id: "work", num: "03", label: t.chapters.work },
-      { id: "certificate", num: "04", label: t.chapters.certificate },
-      { id: "projects", num: "05", label: t.chapters.projects },
-      { id: "contact", num: "06", label: t.chapters.contact },
+      { id: "education", num: "04", label: t.chapters.education },
+      { id: "certificate", num: "05", label: t.chapters.certificate },
+      { id: "projects", num: "06", label: t.chapters.projects },
+      { id: "contact", num: "07", label: t.chapters.contact },
     ],
     [t]
   );

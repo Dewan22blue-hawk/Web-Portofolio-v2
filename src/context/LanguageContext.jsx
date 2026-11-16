@@ -6,6 +6,7 @@ const TRANSLATIONS = {
       home: "Home",
       about: "About",
       work: "Work",
+      education: "Edu",
       certs: "Certs",
       projects: "Projects",
       contact: "Contact",
@@ -14,6 +15,7 @@ const TRANSLATIONS = {
       hero: "Intro",
       about: "About",
       work: "Experience",
+      education: "Education",
       certificate: "Credentials",
       projects: "Projects",
       contact: "Connect",
@@ -48,6 +50,11 @@ const TRANSLATIONS = {
     experience: {
       sub: "What I have done so far",
       head: "Work Experience",
+    },
+    education: {
+      sub: "Academic Journey",
+      head: "Education.",
+      hint: "Keep scrolling to slide timeline",
     },
     certificate: {
       sub: "Credentials & Recognition",
@@ -102,6 +109,7 @@ const TRANSLATIONS = {
       home: "Beranda",
       about: "Tentang",
       work: "Karier",
+      education: "Studi",
       certs: "Sertifikat",
       projects: "Proyek",
       contact: "Kontak",
@@ -110,6 +118,7 @@ const TRANSLATIONS = {
       hero: "Pembuka",
       about: "Tentang",
       work: "Pengalaman",
+      education: "Pendidikan",
       certificate: "Sertifikasi",
       projects: "Proyek",
       contact: "Kontak",
@@ -144,6 +153,11 @@ const TRANSLATIONS = {
     experience: {
       sub: "Perjalanan karier sejauh ini",
       head: "Pengalaman Kerja",
+    },
+    education: {
+      sub: "Riwayat Akademik",
+      head: "Pendidikan.",
+      hint: "Terus gulir untuk menelusuri linimasa",
     },
     certificate: {
       sub: "Kredensial & Pengakuan",

@@ -608,11 +608,97 @@ const projectsId = [
   },
 ];
 
+const educations = [
+  {
+    degree: 'Bachelor (S1) in Information Systems',
+    institution: 'Universitas Bina Sarana Informatika',
+    location: 'Surakarta, Jawa Tengah',
+    period: '09/2025 – 2026',
+    status: 'Graduated · Cum Laude',
+    highlight: true,
+    icon: ubsi,
+    descriptions: [
+      'Completed a Bachelor of Information Systems degree through a credit-transfer pathway to strengthen academic and professional competencies. Coursework focused on information systems analysis and design, database management, business process analysis, application development, and leveraging IT for organizational needs and digital transformation.',
+      'Throughout the program, remained actively employed and contributed on campus, integrating academic theory directly with hands-on professional IT experience.',
+    ],
+  },
+  {
+    degree: 'Diploma III (D3) in Information Systems',
+    institution: 'Universitas Bina Sarana Informatika',
+    location: 'Surakarta, Jawa Tengah',
+    period: '09/2022 – 08/2025',
+    status: 'Graduated · Best Graduate · Summa Cum Laude',
+    highlight: true,
+    icon: ubsi,
+    descriptions: [
+      'Graduated with a Diploma III in Information Systems with Summa Cum Laude honors and was awarded Best Graduate. Focused on applied information technology, programming, application development, database administration, systems analysis, and technology-driven business solutions.',
+      'This program served as the core foundation for building professional expertise in software development, information systems management, and technology-based problem solving.',
+    ],
+  },
+  {
+    degree: 'Computer and Network Engineering (TKJ)',
+    institution: 'SMK Negeri 1 Donorojo',
+    location: 'Pacitan, Jawa Timur',
+    period: '2019 – 2022',
+    status: 'Graduated',
+    highlight: false,
+    icon: null,
+    descriptions: [
+      'Completed vocational education focused on computer assembly and maintenance, operating system installation, network administration, network device configuration, and hardware/software troubleshooting.',
+      'Gained practical field experience managing RT/RW Net networks and working as a Network Engineer handling installation, configuration, maintenance, and network troubleshooting, while independently developing skills in Cyber Security and Web Development.',
+    ],
+  },
+];
+
+const educationsId = [
+  {
+    degree: 'Sarjana (S1) Sistem Informasi',
+    institution: 'Universitas Bina Sarana Informatika',
+    location: 'Surakarta, Jawa Tengah',
+    period: '09/2025 – 2026',
+    status: 'Lulus · Cumlaude',
+    highlight: true,
+    icon: ubsi,
+    descriptions: [
+      'Menyelesaikan pendidikan Sarjana Sistem Informasi melalui jalur transfer sebagai bentuk pengembangan kompetensi akademik dan profesional. Fokus pembelajaran mencakup analisis dan perancangan sistem informasi, manajemen basis data, analisis proses bisnis, pengembangan aplikasi, serta pemanfaatan teknologi informasi untuk mendukung kebutuhan organisasi dan transformasi digital.',
+      'Selama masa studi, tetap aktif bekerja dan berkontribusi di lingkungan kampus, sehingga mampu mengintegrasikan pengetahuan akademik dengan pengalaman profesional di bidang teknologi informasi.',
+    ],
+  },
+  {
+    degree: 'Diploma III (D3) Sistem Informasi',
+    institution: 'Universitas Bina Sarana Informatika',
+    location: 'Surakarta, Jawa Tengah',
+    period: '09/2022 – 08/2025',
+    status: 'Lulus · Wisudawan Terbaik · Summa Cum Laude',
+    highlight: true,
+    icon: ubsi,
+    descriptions: [
+      'Menyelesaikan pendidikan Diploma III Sistem Informasi dengan predikat Summa Cum Laude dan meraih penghargaan sebagai Wisudawan Terbaik. Selama pendidikan, mendalami penerapan teknologi informasi, pemrograman, pengembangan aplikasi, pengelolaan basis data, analisis sistem, serta pemanfaatan teknologi untuk mendukung proses bisnis dan kebutuhan organisasi.',
+      'Pendidikan ini menjadi fondasi dalam mengembangkan kompetensi profesional di bidang pengembangan perangkat lunak, pengelolaan sistem informasi, dan pemecahan masalah berbasis teknologi.',
+    ],
+  },
+  {
+    degree: 'Teknik Komputer dan Jaringan (TKJ)',
+    institution: 'SMK Negeri 1 Donorojo',
+    location: 'Pacitan, Jawa Timur',
+    period: '2019 – 2022',
+    status: 'Telah Lulus',
+    highlight: false,
+    icon: null,
+    descriptions: [
+      'Menempuh pendidikan kejuruan dengan fokus pada perakitan dan pemeliharaan komputer, instalasi sistem operasi, administrasi jaringan, konfigurasi perangkat jaringan, serta troubleshooting perangkat keras dan perangkat lunak.',
+      'Selama masa pendidikan, memperoleh pengalaman praktis dengan mengelola jaringan RT/RW Net dan menjalankan aktivitas sebagai Network Engineer, termasuk instalasi, konfigurasi, pemeliharaan, serta penanganan permasalahan jaringan. Selain itu, mengembangkan kompetensi secara mandiri di bidang Cyber Security dan Web Development melalui pembelajaran dan praktik langsung.',
+    ],
+  },
+];
+
 export {
   services,
   technologies,
   experiences,
   experiencesId,
+  educations,
+  educationsId,
   testimonials,
   testimonialsId,
   projects,

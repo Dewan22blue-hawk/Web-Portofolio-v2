@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import { useScroll, useSpring, motion } from 'framer-motion';
 import Chatbot from './components/Chatbot';
 import ScrollStoryRail from './components/ScrollStoryRail';
+import Education from './components/Education';
 import { LanguageProvider } from './context/LanguageContext';
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
           </div>
           <About />
           <Experience />
+          <Education />
           <MyCertificateContent />
           <Tech />
           <Works />

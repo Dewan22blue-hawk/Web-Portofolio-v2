@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Home, User, Briefcase, Award, FolderGit2, Mail, Globe } from "lucide-react";
+import { Home, User, Briefcase, GraduationCap, Award, FolderGit2, Mail, Globe } from "lucide-react";
 import { LiquidNavbar } from "@/components/ui/liquid-glass-navbar";
 import { useLanguage } from "../context/LanguageContext";
 import { logo } from "../assets";
 
-const sectionIds = ["about", "work", "certificate", "projects", "contact"];
+const sectionIds = ["about", "work", "education", "certificate", "projects", "contact"];
 
 const Navbar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -30,6 +30,12 @@ const Navbar = () => {
         href: "#work",
         icon: <Briefcase className="w-[18px] h-[18px] text-cyan-400" strokeWidth={1.9} />,
         fx: "plane",
+      },
+      {
+        label: t.nav.education,
+        href: "#education",
+        icon: <GraduationCap className="w-[18px] h-[18px] text-emerald-400" strokeWidth={1.9} />,
+        fx: "glow",
       },
       {
         label: t.nav.certs,
