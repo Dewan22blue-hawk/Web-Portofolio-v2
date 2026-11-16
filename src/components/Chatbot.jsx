@@ -10,14 +10,13 @@ function Chatbot() {
   const [loading, setLoading] = useState(false);
 
   const messagesEndRef = useRef(null);
+  const chatContainerRef = useRef(null);
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+    if (messages.length > 0 && chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
+    }
+  }, [messages, loading]);
 
   const sendMessage = async () => {
     if (input.trim() === "") return;
@@ -69,7 +68,7 @@ function Chatbot() {
       {/* Main container for message area and input */}
       <div className="flex flex-col gap-8 mt-12">
         {/* Chatbot message area */}
-        <div className="chat-messages h-64 overflow-y-auto border border-zinc-700 p-3 mb-4 rounded-lg bg-black-200 text-white">
+        <div ref={chatContainerRef} className="chat-messages h-64 overflow-y-auto border border-zinc-700 p-3 mb-4 rounded-lg bg-black-200 text-white">
           {messages.map((msg, index) => (
             <div
               key={index}

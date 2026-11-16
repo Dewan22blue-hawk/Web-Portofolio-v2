@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-background: #050816;
+  --color-foreground: #f8fafc;
+  --color-card: #0b132b;
+  --color-card-foreground: #f8fafc;
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-ring: #38bdf8;
+  --color-chart-1: #2563eb;
+  --color-chart-2: #38bdf8;
+  --color-chart-3: #0ea5e9;
+  --color-chart-4: #6366f1;
+  --color-chart-5: #10b981;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,9 +42,19 @@
 }
 
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  background: #2563eb;
+  background: linear-gradient(-90deg, #2563eb 0%, rgba(56, 189, 248, 0) 100%);
+  background: -webkit-linear-gradient(-90deg, #2563eb 0%, rgba(56, 189, 248, 0) 100%);
+}
+
+.blue-gradient {
+  background: #2563eb;
+  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+}
+
+.obsidian-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(5, 8, 22, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .green-pink-gradient {

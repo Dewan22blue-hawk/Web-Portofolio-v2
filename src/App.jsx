@@ -12,6 +12,7 @@ import Chatbot from './components/Chatbot';
 
 const App = () => {
   useEffect(() => {
+    window.scrollTo(0, 0);
     Aos.init({
       duration: 1000, // Durasi animasi dalam milidetik
       once: false, // Animasi akan diputar setiap kali elemen muncul di viewport
@@ -23,7 +24,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        <motion.div className="fixed z-50 top-0 left-0 w-full h-2 bg-purple-500 origin-left" style={{ scaleX }} />
+        <motion.div className="fixed z-50 top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-500 origin-left shadow-[0_0_12px_rgba(56,189,248,0.6)]" style={{ scaleX }} />
         <div className="bg-center bg-no-repeat bg-cover bg-hero-pattern" data-aos="fade-up">
           <Navbar />
           <Hero />
