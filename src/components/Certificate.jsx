@@ -2,18 +2,20 @@ import { useState } from "react";
 import CertificateItems from "../constants/certificate";
 import ModalBox from "../particles/ModalBox";
 import { SectionWrapper } from "../hoc";
+import { useLanguage } from "../context/LanguageContext";
 
 function MyCertificateContent() {
   const [modalData, setModalData] = useState(null);
+  const { t } = useLanguage();
 
   return (
     <div id="mycertificate" className="bg-tertiary rounded-2xl min-h-[300px] flex flex-col items-center justify-center h-screen gap-3 align-middle ">
       <div id="certificatetitle" className="flex flex-col items-center justify-center gap-6 pt-10 md:w-6/12 max-sm:w-8/12">
         <h2 className="font-bold text-white md:text-4xl max-sm:text-2xl" data-aos="zoom-in-up">
-          My <span className="text-[#915eff] ">Certificate</span>
+          {t.certificate.titlePre} <span className="text-[#38bdf8]">{t.certificate.titleAccent}</span>
         </h2>
         <span className="text-center text-secondary max-sm:text-sm" data-aos="zoom-in-up">
-          It would not be complete if we discussed skills without recognition, here are the competency certificates that I received.
+          {t.certificate.subtitle}
         </span>
       </div>
       <div id="certificateitems" className="flex justify-center w-full md:mt-10 max-sm:mt-2 ">

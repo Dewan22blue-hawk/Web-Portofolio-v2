@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { useLanguage } from "../context/LanguageContext";
 
 function Chatbot() {
+  const { t } = useLanguage();
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -60,11 +62,8 @@ function Chatbot() {
       variants={slideIn("left", "tween", 0.2, 1)}
       className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
     >
-      {/* Section sub-text, using styles from styles.js */}
-      <p className={styles.sectionSubText}>Ask me anything</p>{" "}
-      {/* Translated */}
-      {/* Section title, using styles from styles.js */}
-      <h3 className={styles.sectionHeadText}>Chatbot.</h3>
+      <p className={styles.sectionSubText}>{t.chatbot.sub}</p>{" "}
+      <h3 className={styles.sectionHeadText}>{t.chatbot.head}</h3>
       {/* Main container for message area and input */}
       <div className="flex flex-col gap-8 mt-12">
         {/* Chatbot message area */}
@@ -99,8 +98,7 @@ function Chatbot() {
         {/* Input and send button section */}
         <div className="flex flex-col gap-4">
           <label htmlFor="chat-input" className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Question</span>{" "}
-            {/* Translated */}
+            <span className="mb-4 font-medium text-white">{t.chatbot.questionLabel}</span>{" "}
             <input
               id="chat-input"
               type="text"
@@ -108,7 +106,7 @@ function Chatbot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-              placeholder="Ask about Denny..."
+              placeholder={t.chatbot.placeholder}
               disabled={loading}
             />
           </label>
@@ -117,7 +115,7 @@ function Chatbot() {
             className="px-8 py-3 font-bold text-white shadow-md outline-none bg-tertiary rounded-xl w-fit shadow-primary hover:bg-tertiary-dark transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={loading}
           >
-            {loading ? "Sending..." : "Send"} {/* Translated */}
+            {loading ? t.chatbot.sending : t.chatbot.send}
           </button>
         </div>
       </div>

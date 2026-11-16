@@ -3,6 +3,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { styles } from "../styles";
+import { useLanguage } from "../context/LanguageContext";
 
 const LiquidTechBubble = ({ technology, index }) => {
   const mouseX = useMotionValue(0);
@@ -115,11 +116,12 @@ const LiquidTechBubble = ({ technology, index }) => {
 };
 
 const Tech = () => {
+  const { t } = useLanguage();
   return (
     <>
       <div className="mb-12 text-center sm:text-left">
-        <p className={styles.sectionSubText}>Tools & Stack</p>
-        <h2 className={styles.sectionHeadText}>Technologies.</h2>
+        <p className={styles.sectionSubText}>{t.tech.sub}</p>
+        <h2 className={styles.sectionHeadText}>{t.tech.head}</h2>
       </div>
 
       <div className="flex flex-row flex-wrap justify-center gap-7 sm:gap-10">

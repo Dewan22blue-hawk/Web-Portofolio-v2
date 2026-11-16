@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import { useScroll, useSpring, motion } from 'framer-motion';
 import Chatbot from './components/Chatbot';
 import ScrollStoryRail from './components/ScrollStoryRail';
+import { LanguageProvider } from './context/LanguageContext';
 
 const App = () => {
   useEffect(() => {
@@ -23,30 +24,32 @@ const App = () => {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <motion.div className="fixed z-50 top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-500 origin-left shadow-[0_0_12px_rgba(56,189,248,0.6)]" style={{ scaleX }} />
-        <ScrollStoryRail />
-        <div className="bg-center bg-no-repeat bg-cover bg-hero-pattern">
-          <Navbar />
-          <Hero />
+    <LanguageProvider>
+      <BrowserRouter>
+        <div className="relative z-0 bg-primary">
+          <motion.div className="fixed z-50 top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-sky-400 to-blue-500 origin-left shadow-[0_0_12px_rgba(56,189,248,0.6)]" style={{ scaleX }} />
+          <ScrollStoryRail />
+          <div className="bg-center bg-no-repeat bg-cover bg-hero-pattern">
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+          <Experience />
+          <MyCertificateContent />
+          <Tech />
+          <Works />
+          <Feedbacks />
+          <div className="relative z-0">
+            <Contact />
+            <StarsCanvas />
+            {/* <Footer /> */}
+            <Chatbot />
+            <ContactFoot />
+            <Footer />
+          </div>
         </div>
-        <About />
-        <Experience />
-        <MyCertificateContent />
-        <Tech />
-        <Works />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-          {/* <Footer /> */}
-          <Chatbot />
-          <ContactFoot />
-          <Footer />
-        </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 };
 

@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { EarthCanvas } from "./canvas";
+import { useLanguage } from "../context/LanguageContext";
 
 const EMAILJS_SERVICE_ID =
   import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_hotm9y3";
@@ -16,6 +17,7 @@ const EMAILJS_PUBLIC_KEY =
 
 const Contact = () => {
   const formRef = useRef();
+  const { t } = useLanguage();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -103,8 +105,8 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={styles.sectionSubText}>{t.contact.sub}</p>
+        <h3 className={styles.sectionHeadText}>{t.contact.head}</h3>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -112,13 +114,12 @@ const Contact = () => {
         >
           {/* Name Input */}
           <label htmlFor="name" className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Name</span>{" "}
-            {/* Translated */}
+            <span className="mb-4 font-medium text-white">{t.contact.nameLabel}</span>{" "}
             <input
               type="text"
               id="name"
               value={form.name}
-              placeholder="What's your name?"
+              placeholder={t.contact.namePlaceholder}
               onChange={handleChange}
               name="name"
               className="px-6 py-4 font-medium text-white border-none rounded-lg outline-none bg-tertiary placeholder:text-secondary"
@@ -127,13 +128,12 @@ const Contact = () => {
           </label>
           {/* Email Input */}
           <label htmlFor="email" className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Email</span>{" "}
-            {/* Translated */}
+            <span className="mb-4 font-medium text-white">{t.contact.emailLabel}</span>{" "}
             <input
               type="email"
               id="email"
               value={form.email}
-              placeholder="What's your email?"
+              placeholder={t.contact.emailPlaceholder}
               onChange={handleChange}
               name="email"
               className="px-6 py-4 font-medium text-white border-none rounded-lg outline-none bg-tertiary placeholder:text-secondary"
@@ -142,13 +142,12 @@ const Contact = () => {
           </label>
           {/* Message Input */}
           <label htmlFor="message" className="flex flex-col">
-            <span className="mb-4 font-medium text-white">Your Message</span>{" "}
-            {/* Translated */}
+            <span className="mb-4 font-medium text-white">{t.contact.messageLabel}</span>{" "}
             <textarea
               rows="7"
               id="message"
               value={form.message}
-              placeholder="What do you want to say?"
+              placeholder={t.contact.messagePlaceholder}
               onChange={handleChange}
               name="message"
               className="px-6 py-4 font-medium text-white border-none rounded-lg outline-none bg-tertiary placeholder:text-secondary"
@@ -161,7 +160,7 @@ const Contact = () => {
             className="px-8 py-3 font-bold text-white shadow-md outline-none bg-tertiary rounded-xl w-fit shadow-primary hover:bg-tertiary-dark transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={loading}
           >
-            {loading ? "Sending..." : "Send"} {/* Translated */}
+            {loading ? t.contact.sending : t.contact.send}
           </button>
 
           {/* Feedback Message (Success/Error) */}

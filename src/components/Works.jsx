@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { github } from '../assets';
 import { SectionWrapper } from '../hoc';
-import { projects } from '../constants';
+import { projects, projectsId } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const ProjectCard = ({ name, description, source_code_link, image, tags, index }) => {
   return (
@@ -35,20 +36,21 @@ const ProjectCard = ({ name, description, source_code_link, image, tags, index }
   );
 };
 const Works = () => {
+  const { lang, t } = useLanguage();
+  const activeProjects = lang === 'id' ? projectsId : projects;
   return (
     <>
       <motion.div id="projects" variants={textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <p className={styles.sectionSubText}>{t.works.sub}</p>
+        <h2 className={styles.sectionHeadText}>{t.works.head}</h2>
       </motion.div>
       <div className="flex w-full">
         <motion.p variants={fadeIn('', '', 0.1, 1)} className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work
-          with different technologies, and manage projects effectively.
+          {t.works.body}
         </motion.p>
       </div>
       <div className="flex flex-wrap mt-20 gap-7">
-        {projects.map((project, index) => (
+        {activeProjects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>

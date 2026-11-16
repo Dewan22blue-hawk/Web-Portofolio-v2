@@ -24,6 +24,8 @@ export interface HeroLanyardCardProps {
   tags?: string[];
   links?: HeroLanyardLink[];
   idNumber?: string;
+  dragLabel?: string;
+  flipLabel?: string;
 }
 
 const REST_LENGTH = 92; // px from top anchor bracket to card clip pivot
@@ -37,6 +39,8 @@ export function HeroLanyardCard({
   tags = ["React", "Node.js", "Laravel", "SysAdmin"],
   links = [{ label: "Contact", href: "#contact" }],
   idNumber = "DEV-2024-081",
+  dragLabel = "Drag & pull",
+  flipLabel = "Click to flip",
 }: HeroLanyardCardProps) {
   const [isFlipped, setIsFlipped] = React.useState(false);
   const [isDragging, setIsDragging] = React.useState(false);
@@ -455,10 +459,10 @@ export function HeroLanyardCard({
       {/* Interactive Hint */}
       <div className="mt-5 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/75 border border-white/10 text-xs text-slate-400 backdrop-blur-sm shadow-sm">
         <Move className="w-3.5 h-3.5 text-sky-400" />
-        <span>Drag & pull</span>
+        <span>{dragLabel}</span>
         <span className="text-slate-600">·</span>
         <RotateCw className="w-3.5 h-3.5 text-sky-400" />
-        <span>Click to flip</span>
+        <span>{flipLabel}</span>
       </div>
     </div>
   );

@@ -205,30 +205,73 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Network Engineer Technician',
-    company_name: 'Sedjajar.net',
-    icon: sagitaNet,
-    iconBg: '#383E56',
-    date: 'March 2020 - May 2022',
+    title: 'Marketing Communication (MARCOM) Intern',
+    company_name: 'DMER — Universitas Bina Sarana Informatika (UBSI)',
+    location: 'Surakarta, Jawa Tengah',
+    icon: ubsi,
+    iconBg: '#0f172a',
+    date: '05/2026 – 10/2026',
     points: [
-      'Installation and Configuration: Oversee the installation of network hardware and software components, such as routers, switches, access points, and fiber optic equipment, ensuring all systems are configured correctly and efficiently.',
-      'Troubleshooting and Maintenance: Proactively monitor network performance and resolve complex technical issues, minimizing downtime and ensuring uninterrupted service for end-users.',
-      'Documentation and Reporting: Maintain detailed records of network configurations, installations, and maintenance activities to ensure transparency and facilitate ongoing network management.',
-      'Client Consultation and Support: Collaborate closely with clients to understand their networking requirements, provide expert recommendations, and deliver comprehensive support throughout the entire project lifecycle.',
+      'Supported institutional marketing communication and promotional initiatives.',
+      'Assisted in creating promotional content to strengthen institutional branding and public information.',
+      'Participated in event documentation and digital media publication.',
+      'Coordinated with cross-functional teams to support institutional events and communication needs.',
+    ],
+  },
+  {
+    title: 'Mentor Facilitator',
+    company_name: 'Google Facilitator Program 2025',
+    location: 'Online',
+    icon: googlecloud,
+    iconBg: '#0f172a',
+    date: '05/2025 – 12/2025',
+    points: [
+      'Supported learning delivery and digital competency development for program participants.',
+      'Guided participants in understanding core materials and completing program learning activities.',
+      'Facilitated communication, discussions, and mentoring throughout the cohort.',
+      'Fostered a collaborative learning environment focused on practical digital skills.',
+    ],
+  },
+  {
+    title: 'Full-Stack Web Developer',
+    company_name: 'PT Deraly Innovation Digital',
+    location: 'Bantul, Yogyakarta',
+    icon: web,
+    iconBg: '#0f172a',
+    date: '05/2024 – Present',
+    points: [
+      'Developed responsive web interfaces and backend features aligned with product requirements.',
+      'Implemented business logic, REST API integrations, and database connections.',
+      'Supported frontend-backend integration, debugging, testing, environment configuration, deployment, and ongoing application maintenance.',
     ],
   },
   {
     title: 'Assistant Technical Support',
-    company_name: 'Bina Sarana Informatika University',
+    company_name: 'Universitas Bina Sarana Informatika (UBSI)',
+    location: 'Surakarta, Jawa Tengah',
     icon: ubsi,
-    date: 'Jan 2023 - Present',
+    iconBg: '#0f172a',
+    date: 'Jan 2023 – Present',
     points: [
-      'Network Configuration and Installation: Assisted in setting up and configuring network devices, including routers, switches, and access points, to optimize connectivity and performance.',
-      'Technical Troubleshooting: Provided first-line support by diagnosing and resolving issues related to hardware, software, and network components, ensuring minimal disruption to users.',
-      'CCTV and Network Installation: Supported the installation and maintenance of CCTV systems, including configuring cameras and ensuring secure network integration.',
-      'Hardware and Software Maintenance: Performed regular maintenance tasks, including software updates, hardware repairs, and system optimizations, to maintain operational efficiency.',
-      'User Support: Actively assisted end-users with their daily technical needs, including troubleshooting software and hardware issues, providing guidance on web applications, and supporting basic programming tasks.',
-      'Collaborative Problem-Solving: Worked closely with the technical support team to identify recurring issues, develop solutions, and implement best practices for enhanced system performance.',
+      'Configured and installed network devices including routers, switches, and access points to optimize connectivity.',
+      'Provided first-line technical troubleshooting across hardware, software, and network components.',
+      'Supported CCTV system installation, camera configuration, and secure network integration.',
+      'Performed routine hardware and software maintenance, updates, and system optimizations.',
+      'Assisted end-users with daily technical issues, web applications, and basic programming tasks.',
+    ],
+  },
+  {
+    title: 'Network Engineer Technician',
+    company_name: 'Sedjajar.net',
+    location: 'Indonesia',
+    icon: sagitaNet,
+    iconBg: '#0f172a',
+    date: 'March 2020 – May 2022',
+    points: [
+      'Oversaw installation and configuration of routers, switches, access points, and fiber optic equipment.',
+      'Monitored network performance and resolved complex technical issues to minimize downtime.',
+      'Maintained detailed network configuration, installation, and maintenance documentation.',
+      'Collaborated with clients on networking requirements, technical recommendations, and ongoing support.',
     ],
   },
 ];
@@ -391,4 +434,187 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const experiencesId = [
+  {
+    title: 'Marketing Communication (MARCOM) Intern',
+    company_name: 'DMER — Universitas Bina Sarana Informatika (UBSI)',
+    location: 'Surakarta, Jawa Tengah',
+    icon: ubsi,
+    iconBg: '#0f172a',
+    date: '05/2026 – 10/2026',
+    points: [
+      'Mendukung pelaksanaan kegiatan komunikasi pemasaran dan promosi institusi.',
+      'Membantu pembuatan konten promosi untuk mendukung penyampaian informasi dan branding institusi.',
+      'Berpartisipasi dalam kegiatan dokumentasi serta publikasi melalui media digital.',
+      'Berkoordinasi dengan tim terkait dalam mendukung pelaksanaan kegiatan dan kebutuhan komunikasi institusi.',
+    ],
+  },
+  {
+    title: 'Mentor Facilitator',
+    company_name: 'Google Facilitator Program 2025',
+    location: 'Online',
+    icon: googlecloud,
+    iconBg: '#0f172a',
+    date: '05/2025 – 12/2025',
+    points: [
+      'Mendukung pelaksanaan kegiatan pembelajaran dan pengembangan kompetensi digital bagi peserta program.',
+      'Membantu peserta memahami materi serta mengikuti aktivitas pembelajaran sesuai kebutuhan program.',
+      'Memfasilitasi komunikasi, diskusi, dan pendampingan peserta selama kegiatan berlangsung.',
+      'Mendukung terciptanya proses pembelajaran yang kolaboratif dan berorientasi pada pengembangan keterampilan digital.',
+    ],
+  },
+  {
+    title: 'Full-Stack Web Developer',
+    company_name: 'PT Deraly Innovation Digital',
+    location: 'Bantul, Yogyakarta',
+    icon: web,
+    iconBg: '#0f172a',
+    date: '05/2024 – Sekarang',
+    points: [
+      'Mengembangkan antarmuka web responsif dan fitur backend sesuai kebutuhan produk.',
+      'Mengimplementasikan logika bisnis, integrasi REST API, dan koneksi database.',
+      'Mendukung integrasi frontend-backend, debugging, pengujian, konfigurasi environment, deployment, serta pemeliharaan aplikasi.',
+    ],
+  },
+  {
+    title: 'Asisten Technical Support',
+    company_name: 'Universitas Bina Sarana Informatika (UBSI)',
+    location: 'Surakarta, Jawa Tengah',
+    icon: ubsi,
+    iconBg: '#0f172a',
+    date: 'Jan 2023 – Sekarang',
+    points: [
+      'Konfigurasi & Instalasi Jaringan: Membantu penyiapan serta konfigurasi perangkat jaringan termasuk router, switch, dan access point untuk mengoptimalkan konektivitas.',
+      'Troubleshooting Teknis: Memberikan dukungan lini pertama dalam mendiagnosis dan menyelesaikan kendala perangkat keras, perangkat lunak, maupun jaringan.',
+      'Instalasi CCTV & Jaringan: Mendukung pemasangan dan pemeliharaan sistem CCTV, termasuk konfigurasi kamera serta integrasi jaringan yang aman.',
+      'Pemeliharaan Hardware & Software: Melakukan pemeliharaan rutin seperti pembaruan sistem, perbaikan perangkat keras, dan optimasi sistem agar operasional tetap efisien.',
+      'Dukungan Pengguna: Membantu pengguna dalam kebutuhan teknis harian, mulai dari penanganan gangguan perangkat hingga panduan aplikasi web dan pemrograman dasar.',
+    ],
+  },
+  {
+    title: 'Teknisi Network Engineer',
+    company_name: 'Sedjajar.net',
+    location: 'Indonesia',
+    icon: sagitaNet,
+    iconBg: '#0f172a',
+    date: 'Maret 2020 – Mei 2022',
+    points: [
+      'Instalasi & Konfigurasi: Mengawasi pemasangan perangkat keras dan lunak jaringan seperti router, switch, access point, serta perangkat fiber optik agar seluruh sistem berjalan optimal.',
+      'Troubleshooting & Pemeliharaan: Memantau performa jaringan secara proaktif serta menangani gangguan teknis kompleks untuk meminimalkan downtime bagi pengguna.',
+      'Dokumentasi & Pelaporan: Menyusun catatan konfigurasi jaringan, instalasi, dan aktivitas pemeliharaan secara rinci guna mendukung pengelolaan jaringan berkelanjutan.',
+      'Konsultasi & Dukungan Klien: Berkoordinasi langsung dengan klien untuk memahami kebutuhan jaringan, memberikan rekomendasi teknis, serta dukungan penuh selama proyek berlangsung.',
+    ],
+  },
+];
+
+const testimonialsId = [
+  {
+    testimonial: 'Saya sempat mengira sulit membuat website yang semenarik produk kami, tetapi Denny membuktikan sebaliknya.',
+    name: 'Wahyu Trie',
+    designation: 'Friend Team',
+    company: "Hawk's",
+    image: 'https://randomuser.me/api/portraits/men/4.jpg',
+  },
+  {
+    testimonial: 'Belum pernah saya bertemu web developer yang benar-benar peduli terhadap keberhasilan kliennya seperti Denny.',
+    name: 'Falah Anugerah',
+    designation: 'Network Administrator Team',
+    company: 'Privy ID',
+    image: 'https://randomuser.me/api/portraits/men/1.jpg',
+  },
+  {
+    testimonial: 'Setelah Denny mengoptimalkan website kami, trafik meningkat hingga 50%. Kami sangat terbantu!',
+    name: 'Nanda AJx',
+    designation: 'Staff',
+    company: 'PLN BUMN',
+    image: 'https://randomuser.me/api/portraits/men/6.jpg',
+  },
+];
+
+const projectsId = [
+  {
+    name: 'SEO Bizzagi Audit',
+    description:
+      'SEO Bizzagi Audit mengatasi tantangan audit manual dengan menghemat waktu dan sumber daya serta menyajikan insight yang dapat langsung ditindaklanjuti untuk meningkatkan visibilitas digital bisnis.',
+    tags: [
+      { name: 'NextJS', color: 'blue-text-gradient' },
+      { name: 'React JS', color: 'green-text-gradient' },
+      { name: 'tailwind', color: 'pink-text-gradient' },
+      { name: 'DaisyUI', color: 'green-text-gradient' },
+      { name: 'GCP Services', color: 'pink-text-gradient' },
+      { name: 'Oauth2 Services', color: 'green-text-gradient' },
+    ],
+    image: seoweb,
+    source_code_link: 'https://github.com/C242-SA01/fullstack-seo',
+  },
+  {
+    name: 'API LLM SEO Audit',
+    description:
+      'API backend berbasis Flask yang dirancang untuk menjalankan audit SEO secara efisien. Memanfaatkan Large Language Models (LLM) dan algoritma Random Forest untuk menganalisis serta menghasilkan rekomendasi performa website.',
+    tags: [
+      { name: 'Flask', color: 'blue-text-gradient' },
+      { name: 'Postman', color: 'green-text-gradient' },
+      { name: 'GCP Services', color: 'pink-text-gradient' },
+    ],
+    image: seobizz,
+    source_code_link: 'https://github.com/C242-SA01/backend-model',
+  },
+  {
+    name: 'Report Desk App',
+    description:
+      'Aplikasi web pelaporan dan manajemen layanan yang dibangun dengan CodeIgniter 4 dan Tailwind CSS untuk mempermudah pencatatan, pemantauan tiket, dan pengelolaan laporan secara terstruktur.',
+    tags: [
+      { name: 'Codeigniter 4', color: 'blue-text-gradient' },
+      { name: 'PHP Code', color: 'green-text-gradient' },
+      { name: 'tailwind', color: 'pink-text-gradient' },
+    ],
+    image: reportdesk,
+    source_code_link: 'https://github.com/hawk-xc/CI4-spark/tree/master/report_desk_wapl',
+  },
+  {
+    name: 'Stasiun Roti',
+    description:
+      'Landing page untuk toko roti Stasiun Roti di Surakarta yang menampilkan ragam produk roti segar dengan desain responsif yang nyaman diakses di berbagai perangkat.',
+    tags: [
+      { name: 'HTML 5', color: 'blue-text-gradient' },
+      { name: 'CSS 3', color: 'green-text-gradient' },
+      { name: 'Bootstrap', color: 'pink-text-gradient' },
+      { name: 'JQuery', color: 'blue-text-gradient' },
+    ],
+    image: stasiunRoti,
+    source_code_link: 'https://github.com/Dewan22blue-hawk/website-kelompok',
+  },
+  {
+    name: 'Laradev E-Antrean Web Apps',
+    description:
+      'Aplikasi web manajemen antrean digital berbasis Laravel Livewire dan Tailwind CSS yang membantu pengelolaan nomor antrean layanan menjadi lebih cepat dan tertib.',
+    tags: [
+      { name: 'Laravel-API', color: 'blue-text-gradient' },
+      { name: 'Laravel-Livewire', color: 'green-text-gradient' },
+      { name: 'Tailwind', color: 'pink-text-gradient' },
+    ],
+    image: laradev,
+    source_code_link: 'https://github.com/hawk-xc/Laradev_e_antrean',
+  },
+  {
+    name: 'Mobile Apps E-Antrean',
+    description:
+      'Pengembangan lanjutan dari Laradev E-Antrean yang terintegrasi dengan aplikasi mobile Flutter menggunakan API Laravel Sanctum.',
+    tags: [
+      { name: 'Flutter', color: 'blue-text-gradient' },
+    ],
+    image: mobileApp,
+    source_code_link: 'https://github.com/hawk-xc/Flutter_e_antrean',
+  },
+];
+
+export {
+  services,
+  technologies,
+  experiences,
+  experiencesId,
+  testimonials,
+  testimonialsId,
+  projects,
+  projectsId,
+};

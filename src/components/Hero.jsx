@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Download, ArrowRight } from "lucide-react";
 import { HeroLanyardCard } from "@/components/ui/hero-lanyard-card";
 import { GalaxyMeteors } from "@/components/ui/galaxy-meteors";
+import { useLanguage } from "../context/LanguageContext";
 import profile from "../assets/dennyirawan.png";
 
 const texts = [
@@ -16,6 +17,7 @@ const texts = [
 ];
 
 const Hero = () => {
+  const { t } = useLanguage();
   const heroRef = useRef(null);
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -86,7 +88,7 @@ const Hero = () => {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
             </span>
             <span className="text-xs sm:text-sm font-medium text-slate-300 tracking-wide">
-              Available for Projects
+              {t.hero.badge}
             </span>
           </motion.div>
 
@@ -97,7 +99,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-white"
           >
-            Hi, I'm{" "}
+            {t.hero.greeting}{" "}
             <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-blue-500 bg-clip-text text-transparent">
               Denny Irawan
             </span>
@@ -110,7 +112,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-4 text-xl sm:text-2xl lg:text-3xl font-medium text-slate-300 min-h-[40px] flex items-center flex-wrap"
           >
-            <span className="text-slate-400 mr-2">I am a</span>
+            <span className="text-slate-400 mr-2">{t.hero.iam}</span>
             <span className="text-sky-400 font-semibold">{currentText}</span>
             <span className="inline-block w-0.5 h-6 ml-1.5 bg-sky-400 animate-pulse" />
           </motion.div>
@@ -122,7 +124,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-4 text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed"
           >
-            I build web applications with React, Laravel, and Node.js, and keep Linux servers, networks, and IT operations running smoothly.
+            {t.hero.description}
           </motion.p>
 
           {/* Action CTAs */}
@@ -137,7 +139,7 @@ const Hero = () => {
               href="#contact"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white bg-blue-600 hover:bg-blue-500 active:bg-blue-700 shadow-[0_0_25px_-5px_rgba(37,99,235,0.6)] hover:shadow-[0_0_30px_rgba(56,189,248,0.5)] transition-all duration-300 group"
             >
-              <span>Get in Touch</span>
+              <span>{t.hero.ctaPrimary}</span>
               <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
             </a>
 
@@ -148,7 +150,7 @@ const Hero = () => {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-medium text-slate-200 hover:text-white border border-white/15 bg-white/[0.04] hover:bg-white/10 active:bg-white/[0.15] backdrop-blur-md shadow-sm transition-all duration-300 group"
             >
               <Download className="w-4 h-4 text-sky-400 group-hover:translate-y-0.5 transition-transform" />
-              <span>Download CV</span>
+              <span>{t.hero.ctaCv}</span>
             </a>
           </motion.div>
         </motion.div>
@@ -160,16 +162,18 @@ const Hero = () => {
         >
           <HeroLanyardCard
             name="Denny Irawan, S.Kom"
-            role="Full Stack Developer & IT Specialist"
+            role={t.hero.lanyardRole}
             team="UBSI · Bangkit '24"
             image={profile}
-            bio="Full Stack Developer and IT Specialist working with React, Laravel, and Node.js alongside Linux servers, networking, and IT support."
+            bio={t.hero.lanyardBio}
             tags={["React", "Node.js", "Laravel", "IT Support", "SysAdmin"]}
             links={[
-              { label: "Contact Me", href: "#contact" },
-              { label: "View Projects", href: "#projects" },
+              { label: t.hero.lanyardContact, href: "#contact" },
+              { label: t.hero.lanyardProjects, href: "#projects" },
             ]}
             idNumber="DEV-2024-081"
+            dragLabel={t.hero.lanyardDrag}
+            flipLabel={t.hero.lanyardFlip}
           />
         </motion.div>
       </div>

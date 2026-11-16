@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-
-const CHAPTERS = [
-  { id: "hero", num: "01", label: "Intro" },
-  { id: "about", num: "02", label: "About" },
-  { id: "work", num: "03", label: "Experience" },
-  { id: "certificate", num: "04", label: "Credentials" },
-  { id: "projects", num: "05", label: "Projects" },
-  { id: "contact", num: "06", label: "Connect" },
-];
+import { useLanguage } from "../context/LanguageContext";
 
 const ScrollStoryRail = () => {
+  const { t } = useLanguage();
   const [activeId, setActiveId] = useState("hero");
+
+  const CHAPTERS = useMemo(
+    () => [
+      { id: "hero", num: "01", label: t.chapters.hero },
+      { id: "about", num: "02", label: t.chapters.about },
+      { id: "work", num: "03", label: t.chapters.work },
+      { id: "certificate", num: "04", label: t.chapters.certificate },
+      { id: "projects", num: "05", label: t.chapters.projects },
+      { id: "contact", num: "06", label: t.chapters.contact },
+    ],
+    [t]
+  );
   const { scrollYProgress } = useScroll();
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 120,
