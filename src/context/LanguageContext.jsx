@@ -50,10 +50,18 @@ const TRANSLATIONS = {
       head: "Work Experience",
     },
     certificate: {
+      sub: "Credentials & Recognition",
       titlePre: "My",
-      titleAccent: "Certificate",
+      titleAccent: "Certificates.",
       subtitle:
         "Competency certificates and credentials earned across web development, networking, and cloud.",
+      countSuffix: "Certificates",
+      viewAction: "View credentials",
+      publisher: "Publisher",
+      credential: "Credential ID",
+      year: "Issued",
+      verify: "Verify",
+      close: "Close",
     },
     tech: {
       sub: "Tools & Stack",
@@ -138,10 +146,18 @@ const TRANSLATIONS = {
       head: "Pengalaman Kerja",
     },
     certificate: {
+      sub: "Kredensial & Pengakuan",
       titlePre: "Sertifikat",
-      titleAccent: "Saya",
+      titleAccent: "Saya.",
       subtitle:
         "Sertifikat kompetensi dan kredensial yang saya raih di bidang pengembangan web, jaringan, dan cloud.",
+      countSuffix: "Sertifikat",
+      viewAction: "Lihat kredensial",
+      publisher: "Penerbit",
+      credential: "ID Kredensial",
+      year: "Tahun",
+      verify: "Verifikasi",
+      close: "Tutup",
     },
     tech: {
       sub: "Alat & Teknologi",
