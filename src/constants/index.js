@@ -278,21 +278,21 @@ const experiences = [
 
 const testimonials = [
   {
-    testimonial: 'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
+    testimonial: 'I thought it was impossible to make a website as beautiful as our product, but Denny proved me wrong.',
     name: 'Wahyu Trie',
     designation: 'Friend Team',
     company: "Hawk's",
     image: 'https://randomuser.me/api/portraits/men/4.jpg',
   },
   {
-    testimonial: "I've never met a web developer who truly cares about their clients' success like Rick does.",
+    testimonial: "I've never met a web developer who truly cares about their clients' success like Denny does.",
     name: 'Falah Anugerah',
     designation: 'Network Administrator Team',
     company: 'Privy ID',
     image: 'https://randomuser.me/api/portraits/men/1.jpg',
   },
   {
-    testimonial: "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    testimonial: "After Denny optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: 'Nanda AJx',
     designation: 'Staff',
     company: 'PLN BUMN',
@@ -303,6 +303,7 @@ const testimonials = [
 const projects = [
   {
     name: 'SEO Bizzagi Audit',
+    category: 'web',
     description:
       'SEO Bizzagi Audit addresses the challenges of manual audits, saving time and resources while delivering actionable insights. Perfect for businesses seeking to enhance their digital presence and maintain a competitive edge.',
     tags: [
@@ -315,7 +316,7 @@ const projects = [
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'Tailwind',
         color: 'pink-text-gradient',
       },
       {
@@ -327,7 +328,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
       {
-        name: 'Oauth2 Services',
+        name: 'OAuth2',
         color: 'green-text-gradient',
       },
     ],
@@ -336,6 +337,7 @@ const projects = [
   },
   {
     name: 'API LLM SEO Audit',
+    category: 'backend',
     description:
       'The LLM SEO Audit API is a backend application built using Flask, designed to provide an efficient and scalable solution for performing SEO audits. This API leverages Large Language Models (LLM) and the Random Forest algorithm to analyze and generate actionable insights for improving website performance.',
     tags: [
@@ -357,18 +359,20 @@ const projects = [
   },
   {
     name: 'Report Desk App',
-    description: 'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+    category: 'web',
+    description:
+      'Web-based reporting and service ticket management platform built with CodeIgniter 4 and Tailwind CSS to streamline ticket tracking, incident logging, and structured report administration.',
     tags: [
       {
-        name: 'Codeigniter 4',
+        name: 'CodeIgniter 4',
         color: 'blue-text-gradient',
       },
       {
-        name: 'PHP Code',
+        name: 'PHP',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'Tailwind',
         color: 'pink-text-gradient',
       },
     ],
@@ -377,6 +381,7 @@ const projects = [
   },
   {
     name: 'Stasiun Roti',
+    category: 'web',
     description:
       'Landing page for Stasiun Roti, a bakery in Surakarta, showcasing their range of freshly baked goods. The site features an elegant and user-friendly design, highlighting the bakery’s offerings, values, and atmosphere, with responsive design to provide a seamless experience across all devices.',
     tags: [
@@ -393,7 +398,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
       {
-        name: 'JQuery',
+        name: 'jQuery',
         color: 'blue-text-gradient',
       },
     ],
@@ -402,14 +407,16 @@ const projects = [
   },
   {
     name: 'Laradev E-Antrean Web Apps',
-    description: 'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+    category: 'web',
+    description:
+      'Digital queue management web application built with Laravel Livewire, Laravel API, and Tailwind CSS to make service queue registration, monitoring, and counter handling faster and more organized.',
     tags: [
       {
-        name: 'Laravel-API',
+        name: 'Laravel API',
         color: 'blue-text-gradient',
       },
       {
-        name: 'Laravel-Livewire',
+        name: 'Laravel Livewire',
         color: 'green-text-gradient',
       },
       {
@@ -422,6 +429,7 @@ const projects = [
   },
   {
     name: 'Mobile Apps E-Antrean',
+    category: 'mobile',
     description: 'This project is a continuation of Laradev E-Antrean, where the application is integrated with Mobile Apps made using Flutter using Laravel Sanctum APIs.',
     tags: [
       {
@@ -534,21 +542,23 @@ const testimonialsId = [
 const projectsId = [
   {
     name: 'SEO Bizzagi Audit',
+    category: 'web',
     description:
       'SEO Bizzagi Audit mengatasi tantangan audit manual dengan menghemat waktu dan sumber daya serta menyajikan insight yang dapat langsung ditindaklanjuti untuk meningkatkan visibilitas digital bisnis.',
     tags: [
       { name: 'NextJS', color: 'blue-text-gradient' },
       { name: 'React JS', color: 'green-text-gradient' },
-      { name: 'tailwind', color: 'pink-text-gradient' },
+      { name: 'Tailwind', color: 'pink-text-gradient' },
       { name: 'DaisyUI', color: 'green-text-gradient' },
       { name: 'GCP Services', color: 'pink-text-gradient' },
-      { name: 'Oauth2 Services', color: 'green-text-gradient' },
+      { name: 'OAuth2', color: 'green-text-gradient' },
     ],
     image: seoweb,
     source_code_link: 'https://github.com/C242-SA01/fullstack-seo',
   },
   {
     name: 'API LLM SEO Audit',
+    category: 'backend',
     description:
       'API backend berbasis Flask yang dirancang untuk menjalankan audit SEO secara efisien. Memanfaatkan Large Language Models (LLM) dan algoritma Random Forest untuk menganalisis serta menghasilkan rekomendasi performa website.',
     tags: [
@@ -561,36 +571,39 @@ const projectsId = [
   },
   {
     name: 'Report Desk App',
+    category: 'web',
     description:
       'Aplikasi web pelaporan dan manajemen layanan yang dibangun dengan CodeIgniter 4 dan Tailwind CSS untuk mempermudah pencatatan, pemantauan tiket, dan pengelolaan laporan secara terstruktur.',
     tags: [
-      { name: 'Codeigniter 4', color: 'blue-text-gradient' },
-      { name: 'PHP Code', color: 'green-text-gradient' },
-      { name: 'tailwind', color: 'pink-text-gradient' },
+      { name: 'CodeIgniter 4', color: 'blue-text-gradient' },
+      { name: 'PHP', color: 'green-text-gradient' },
+      { name: 'Tailwind', color: 'pink-text-gradient' },
     ],
     image: reportdesk,
     source_code_link: 'https://github.com/hawk-xc/CI4-spark/tree/master/report_desk_wapl',
   },
   {
     name: 'Stasiun Roti',
+    category: 'web',
     description:
       'Landing page untuk toko roti Stasiun Roti di Surakarta yang menampilkan ragam produk roti segar dengan desain responsif yang nyaman diakses di berbagai perangkat.',
     tags: [
       { name: 'HTML 5', color: 'blue-text-gradient' },
       { name: 'CSS 3', color: 'green-text-gradient' },
       { name: 'Bootstrap', color: 'pink-text-gradient' },
-      { name: 'JQuery', color: 'blue-text-gradient' },
+      { name: 'jQuery', color: 'blue-text-gradient' },
     ],
     image: stasiunRoti,
     source_code_link: 'https://github.com/Dewan22blue-hawk/website-kelompok',
   },
   {
     name: 'Laradev E-Antrean Web Apps',
+    category: 'web',
     description:
       'Aplikasi web manajemen antrean digital berbasis Laravel Livewire dan Tailwind CSS yang membantu pengelolaan nomor antrean layanan menjadi lebih cepat dan tertib.',
     tags: [
-      { name: 'Laravel-API', color: 'blue-text-gradient' },
-      { name: 'Laravel-Livewire', color: 'green-text-gradient' },
+      { name: 'Laravel API', color: 'blue-text-gradient' },
+      { name: 'Laravel Livewire', color: 'green-text-gradient' },
       { name: 'Tailwind', color: 'pink-text-gradient' },
     ],
     image: laradev,
@@ -598,6 +611,7 @@ const projectsId = [
   },
   {
     name: 'Mobile Apps E-Antrean',
+    category: 'mobile',
     description:
       'Pengembangan lanjutan dari Laradev E-Antrean yang terintegrasi dengan aplikasi mobile Flutter menggunakan API Laravel Sanctum.',
     tags: [
