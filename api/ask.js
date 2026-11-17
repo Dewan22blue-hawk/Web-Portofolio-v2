@@ -1,104 +1,159 @@
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || 'YOUR_GEMINI_API_KEY_DI_SINI';
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
 
-const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+const DENNY_STRUCTURED_DATA = `
+**Profil Denny Irawan:**
+- Nama Lengkap: Denny Irawan
+- Peran: Full Stack Developer & IT Specialist
+- Email: dennyirawan170204@gmail.com
+- WhatsApp / Telepon: +62 852 3754 5993
+- Lokasi: Surakarta, Jawa Tengah, Indonesia
+- LinkedIn: https://www.linkedin.com/in/denny-irawan22
+- GitHub: https://github.com/Dewan22blue-hawk
+- Ringkasan: Full Stack Developer dan IT Specialist yang membangun aplikasi web dengan React, Next.js, Laravel, dan Node.js sekaligus mengelola server Linux, administrasi jaringan, dukungan IT, serta layanan cloud (Google Cloud Platform & Alibaba Cloud).
 
-const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+**Pendidikan:**
+1. Sarjana (S1) Sistem Informasi — Universitas Bina Sarana Informatika (Surakarta)
+   - Periode: 09/2025 – 2026 | Status: Lulus · Cum Laude
+   - Fokus: Analisis & perancangan sistem informasi, manajemen basis data, analisis proses bisnis, pengembangan aplikasi, dan transformasi digital.
+2. Diploma III (D3) Sistem Informasi — Universitas Bina Sarana Informatika (Surakarta)
+   - Periode: 09/2022 – 08/2025 | Status: Lulus · Wisudawan Terbaik · Summa Cum Laude
+   - Fokus: Pemrograman, pengembangan aplikasi, pengelolaan basis data, dan analisis sistem.
+3. SMK Negeri 1 Donorojo (Pacitan, Jawa Timur) — Teknik Komputer dan Jaringan (TKJ)
+   - Periode: 2019 – 2022 | Status: Telah lulus
+   - Fokus: Perakitan komputer, administrasi jaringan, RT/RW Net & Network Engineer, Cyber Security, dan Web Development.
 
-const denny_irawan_structured_data = `
-**Informasi Profil Denny Irawan:**
--   **Nama Lengkap:** Denny Irawan
--   **Email:** dennyirawan1704@gmail.com
--   **Lokasi:** Surakarta, Central Java
--   **LinkedIn:** linkedin.com/in/denny-irawan22
--   **Nomor Telepon:** +62 852 3754 5993
--   **Website Portofolio:** https:
--   **GitHub:** github.com/Dewan22blue-hawk
--   **Ringkasan Profil:** Seorang profesional IT yang proaktif dan serbaguna dengan pengalaman praktis dalam dukungan teknis, administrasi jaringan, dan pemrograman. Memiliki fondasi yang kuat dalam manajemen infrastruktur cloud, dengan keahlian yang berkembang dalam layanan Google Cloud Platform (GCP), termasuk menerapkan solusi yang skalabel, mengotomatisasi alur kerja, dan mengoptimalkan konfigurasi jaringan untuk lingkungan cloud. Latar belakang dalam pemecahan masalah, optimasi sistem, dan administrasi jaringan memposisikan saya untuk secara efektif mengelola aplikasi berbasis cloud, memastikan kinerja dan keamanan tinggi.
+**Pengalaman Kerja:**
+1. Marketing Communication (MARCOM) Intern — DMER Universitas Bina Sarana Informatika (UBSI), Surakarta (05/2026 – 10/2026)
+2. Mentor Facilitator — Google Facilitator Program 2025, Online (05/2025 – 12/2025)
+3. Full-Stack Web Developer — PT Deraly Innovation Digital, Bantul, Yogyakarta (05/2024 – Present)
+4. Full-Stack Web Developer Freelance — Deraly.id, Yogyakarta (Aug 2022 – Feb 2023)
+5. Information Technology Support — Universitas Bina Sarana Informatika (UBSI), Surakarta (Jan 2023 – Present)
+6. Network Engineer Technician — Sedjajar.net (Mar 2020 – May 2022)
 
-**Informasi Pendidikan Denny Irawan:**
--   **Universitas:** Bina Sarana Informatika University, Surakarta, Central Java
-    -   **Periode:** Juli 2022 - Sekarang (saat ini mahasiswa semester 6)
-    -   **Jurusan:** Sistem Informasi (Fakultas Teknik dan Informatika)
-    -   **Keahlian yang Dipelajari:** Manajemen dan pemrosesan informasi menggunakan pemrograman web dan seluler. Mengembangkan keterampilan dalam membuat aplikasi web dan terus mengasah kemampuan dalam berbagai aspek pengembangan aplikasi, termasuk analisis sistem, manajemen basis data, dan desain antarmuka pengguna.
--   **Sekolah Menengah Kejuruan (SMK):** SMK N 1 Donorojo, Pacitan, Jawa Timur
-    -   **Periode:** Mei 2019 - Juli 2022
-    -   **Fokus Studi:** Proaktif dan serbaguna dalam dukungan teknis, administrasi jaringan, dan pemrograman. Memiliki fondasi yang kuat dalam manajemen infrastruktur cloud, dengan keahlian yang berkembang dalam layanan Google Cloud Platform (GCP), termasuk menerapkan solusi yang skalabel, mengotomatisasi alur kerja, dan mengoptimalkan konfigurasi jaringan untuk lingkungan cloud. Latar belakang dalam pemecahan masalah, optimasi sistem, dan administrasi jaringan memposisikan saya untuk secara efektif mengelola aplikasi berbasis cloud, memastikan kinerja dan keamanan tinggi.
+**Proyek Utama:**
+1. SEO Bizzagi Audit (NextJS, React JS, Tailwind, DaisyUI, GCP Services, OAuth2) — https://github.com/C242-SA01/fullstack-seo
+2. API LLM SEO Audit (Flask, LLM, Random Forest, Postman, GCP Services) — https://github.com/C242-SA01/backend-model
+3. Report Desk App (CodeIgniter 4, PHP, Tailwind) — https://github.com/hawk-xc/CI4-spark/tree/master/report_desk_wapl
+4. Stasiun Roti (HTML 5, CSS 3, Bootstrap, jQuery) — https://github.com/Dewan22blue-hawk/website-kelompok
+5. Laradev E-Antrean Web Apps (Laravel API, Laravel Livewire, Tailwind) — https://github.com/hawk-xc/Laradev_e_antrean
+6. Mobile Apps E-Antrean (Flutter & Laravel Sanctum API) — https://github.com/hawk-xc/Flutter_e_antrean
 
-**Informasi Pengalaman Profesional Denny Irawan:**
--   **Web Developer - Freelance Deraly Id**
-    -   **Periode:** Agustus 2022 - Februari 2023
-    -   **Lokasi:** Yogyakarta, DIY
-    -   **Tanggung Jawab:** Mengerjakan berbagai proyek aplikasi web, terutama menggunakan framework Laravel. Bertanggung jawab membangun aplikasi web dinamis yang disesuaikan dengan kebutuhan klien. Juga mengembangkan situs web statis untuk undangan pernikahan, berfokus pada desain yang bersih, menarik secara visual dengan tata letak responsif.
--   **Network Engineer - Freelance**
-    -   **Periode:** Mei 2020 - Juli 2022
-    -   **Lokasi:** Pacitan, East Java
-    -   **Tanggung Jawab:** Mengkhususkan diri dalam Administrasi Jaringan dan Instalasi FTTH, menawarkan keahlian dalam merancang, mengimplementasikan, dan memelihara infrastruktur jaringan untuk berbagai klien. Tanggung jawab termasuk solusi jaringan siklus penuh, dari pengaturan hingga pemeliharaan berkelanjutan dan penyelesaian masalah.
--   **Technical Support - Bina Sarana Informatika University**
-    -   **Periode:** Maret 2023 - Sekarang
-    -   **Lokasi:** Surakarta, Central Java
-    -   **Tanggung Jawab:** Bekerja sebagai asisten Technical Support magang, mendapatkan pengalaman praktis dalam pemecahan masalah teknis, konfigurasi jaringan, instalasi CCTV dan jaringan, serta pemeliharaan hardware/software. Secara aktif membantu pengguna dengan masalah perangkat lunak, perangkat keras, dan aplikasi web sehari-hari, pemrograman, dll.
+**Keahlian & Teknologi:**
+- Frontend: React.js, Next.js, Tailwind CSS, Bootstrap, jQuery, HTML 5, CSS 3, Figma
+- Backend & DB: Laravel, CodeIgniter 4, Node.js, Express, Flask, PHP, Python, JavaScript, MySQL, MongoDB
+- Mobile: Flutter, Dart
+- Cloud & Infrastruktur: Google Cloud Platform (GCP), Alibaba Cloud, Docker, Linux, MikroTik, Cisco, Network Security, IT Support, Software Quality Assurance (SQA)
 
-**Informasi Keterampilan (Skills) Denny Irawan:**
--   Software Quality Assurance
--   Mobile Programming
--   Network Engineer
--   Network Security
--   Programming Language
-    -   Python (Expert)
-    -   Javascript (Proficient)
-    -   PHP (Expert)
-    -   Dart (Competent)
--   Web Programming
--   Cloud Computing
--   Database Administration
--   System Administration
-
-**Informasi Sertifikat Denny Irawan:**
--   Certificate of Competency Junior Network Administrator (BNSP)
--   ACP Cloud Computing Certification
--   CCNA: Introduction to Networks
--   Google Cloud Computing Foundations Certificate
--   Ethical Hacker (Cisco Networking Academy)
--   ACA Cloud Computing Certification
--   Developer Certificate Alibaba
--   MTCNA
--   Certificate of Competency Software Quality Assurance (SQA) PT. Tanjung Mulia Informatika
+**Sertifikasi Kompetensi:**
+- Developer (Dicoding, Codepolitan, Skilvul, IAII, Kemdikbudristek)
+- Cyber Security (LKS Wilker 4, Gemastik, Cisco Ethical Hacker, Google Cybersecurity)
+- Cloud Computing (Google Cloud Architect & Foundations, Alibaba Cloud ACA & ACP Cloud Computing)
+- Network & IT Support (CCNA: Introduction to Networks, MTCNA, BNSP Junior Network Administrator, LSP Network Engineer, TKJ)
+- Lainnya: Bangkit Academy Certificate, Software Quality Assurance (SQA)
 `;
 
+function buildServerFallback(question, lang = "id") {
+  const q = (question || "").toLowerCase();
+  const isId =
+    lang === "id" ||
+    /\b(siapa|apa|pengalaman|kerja|pendidikan|kuliah|lulus|proyek|sertifikat|kontak|hubungi|halo|hai)\b/i.test(q);
+
+  if (/(contact|hubungi|kontak|email|wa|whatsapp|linkedin|github)/.test(q)) {
+    return isId
+      ? "Anda dapat menghubungi saya melalui:\n• Email: dennyirawan170204@gmail.com\n• WhatsApp: +62 852 3754 5993\n• LinkedIn: linkedin.com/in/denny-irawan22\n• GitHub: github.com/Dewan22blue-hawk"
+      : "You can contact me via:\n• Email: dennyirawan170204@gmail.com\n• WhatsApp: +62 852 3754 5993\n• LinkedIn: linkedin.com/in/denny-irawan22\n• GitHub: github.com/Dewan22blue-hawk";
+  }
+  if (/(education|pendidikan|kuliah|lulus|sarjana|diploma|s1|d3|smk|ubsi)/.test(q)) {
+    return isId
+      ? "Riwayat pendidikan saya:\n• S1 Sistem Informasi — UBSI (09/2025 – 2026) · Lulus Cum Laude\n• D3 Sistem Informasi — UBSI (09/2022 – 08/2025) · Summa Cum Laude · Wisudawan Terbaik\n• SMK Negeri 1 Donorojo — TKJ (2019 – 2022)"
+      : "My education history:\n• Bachelor (S1) in Information Systems — UBSI (09/2025 – 2026) · Cum Laude\n• Diploma III (D3) in Information Systems — UBSI (09/2022 – 08/2025) · Summa Cum Laude · Best Graduate\n• SMK Negeri 1 Donorojo — TKJ (2019 – 2022)";
+  }
+  if (/(experience|pengalaman|kerja|karier|work|deraly|facilitator|marcom|sedjajar)/.test(q)) {
+    return isId
+      ? "Pengalaman kerja saya:\n• MARCOM Intern — DMER UBSI (05/2026 – 10/2026)\n• Mentor Facilitator — Google Facilitator Program 2025 (05/2025 – 12/2025)\n• Full-Stack Web Developer — PT Deraly Innovation Digital (05/2024 – Present)\n• IT Support — UBSI (Jan 2023 – Present)\n• Network Engineer — Sedjajar.net (Mar 2020 – May 2022)"
+      : "My work experience:\n• MARCOM Intern — DMER UBSI (05/2026 – 10/2026)\n• Mentor Facilitator — Google Facilitator Program 2025 (05/2025 – 12/2025)\n• Full-Stack Web Developer — PT Deraly Innovation Digital (05/2024 – Present)\n• IT Support — UBSI (Jan 2023 – Present)\n• Network Engineer Technician — Sedjajar.net (Mar 2020 – May 2022)";
+  }
+  if (/(project|proyek|projek|aplikasi|seo|antrean|report desk|stasiun roti)/.test(q)) {
+    return isId
+      ? "Proyek unggulan saya:\n• SEO Bizzagi Audit (NextJS, React, GCP, OAuth2)\n• API LLM SEO Audit (Flask, LLM, Random Forest)\n• Report Desk App (CodeIgniter 4, Tailwind)\n• Stasiun Roti (HTML5, CSS3, Bootstrap, jQuery)\n• Laradev E-Antrean Web & Mobile Apps (Laravel Livewire & Flutter)"
+      : "My featured projects:\n• SEO Bizzagi Audit (NextJS, React, GCP, OAuth2)\n• API LLM SEO Audit (Flask, LLM, Random Forest)\n• Report Desk App (CodeIgniter 4, Tailwind)\n• Stasiun Roti (HTML5, CSS3, Bootstrap, jQuery)\n• Laradev E-Antrean Web & Mobile Apps (Laravel Livewire & Flutter)";
+  }
+
+  return isId
+    ? "Saya Denny Irawan, Full Stack Developer & IT Specialist di Surakarta. Tanyakan kepada saya seputar pendidikan (S1/D3 Sistem Informasi UBSI), pengalaman kerja, proyek web/mobile, sertifikasi, atau kontak saya!"
+    : "I'm Denny Irawan, a Full Stack Developer & IT Specialist based in Surakarta. Feel free to ask about my education, work experience, web/mobile projects, certifications, or contact details!";
+}
+
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Metode Tidak Diizinkan' });
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method Not Allowed" });
   }
 
-  const { question } = req.body;
+  const { question, history = [], lang = "en" } = req.body || {};
 
-  if (!question) {
-    return res.status(400).json({ error: 'Pertanyaan tidak disediakan.' });
+  if (!question || typeof question !== "string" || !question.trim()) {
+    return res.status(400).json({ error: "Question is required." });
   }
+
+  const hasValidKey =
+    GEMINI_API_KEY &&
+    !GEMINI_API_KEY.includes("YOUR_GEMINI_API_KEY") &&
+    GEMINI_API_KEY.trim().length > 10;
+
+  if (!hasValidKey) {
+    return res.status(200).json({
+      answer: buildServerFallback(question, lang),
+      source: "knowledge-base",
+    });
+  }
+
+  const historyText = Array.isArray(history)
+    ? history
+        .slice(-6)
+        .map((m) => `${m.sender === "user" ? "User" : "Denny"}: ${m.text}`)
+        .join("\n")
+    : "";
 
   const prompt = `
-    Anda adalah asisten virtual saya, yakni Denny Irawan. Anda hanya boleh menjawab pertanyaan berdasarkan informasi yang diberikan dalam data di bawah ini. Jika informasi tidak tersedia di sini, katakan bahwa Anda tidak memiliki informasi tersebut. Jangan membuat-buat jawaban atau menambahkan informasi dari luar data berikut kecuali menambahkan sedikit penjelasan mengenai skill-skill yang saya punya di data tersebut. Jawaban harus singkat, padat, dan langsung ke intinya dan ganti agar kata ganti 'dia' menjadi 'saya' untuk menggantikan saya denny irawan.
+Anda adalah asisten virtual resmi untuk portofolio Denny Irawan (berbicara sebagai "saya" / "I" mewakili Denny Irawan).
+Jawablah menggunakan bahasa yang sama dengan pertanyaan pengguna (Bahasa Indonesia atau English).
+Gunakan HANYA fakta dari data terstruktur di bawah ini. Jika ada hal yang tidak tercantum, katakan dengan jujur bahwa informasi tersebut tidak tersedia di portofolio ini.
+Buat jawaban ringkas, ramah, jelas, dan langsung ke intinya (boleh memakai poin singkat bila membantu).
 
-    Berikut adalah data saya, Denny Irawan:
-    ---
-    ${denny_irawan_structured_data}
-    ---
+Data Portofolio Denny Irawan:
+---
+${DENNY_STRUCTURED_DATA}
+---
+${historyText ? `\nRiwayat Percakapan Terakhir:\n${historyText}\n` : ""}
+Pertanyaan Pengguna: ${question.trim()}
 
-    Pertanyaan Pengguna: ${question}
+Jawaban:
+  `.trim();
 
-    Jawaban:
-  `;
+  const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+  const candidateModels = ["gemini-2.5-flash", "gemini-2.0-flash"];
 
-  try {
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
-
-    res.status(200).json({ answer: text });
-  } catch (error) {
-    console.error('Kesalahan saat menghasilkan konten dari model AI:', error);
-    res.status(500).json({ error: 'Gagal mendapatkan respons dari model AI.' });
+  for (const modelName of candidateModels) {
+    try {
+      const model = genAI.getGenerativeModel({ model: modelName });
+      const result = await model.generateContent(prompt);
+      const text = result?.response?.text?.();
+      if (text && text.trim()) {
+        return res.status(200).json({
+          answer: text.trim(),
+          source: modelName,
+        });
+      }
+    } catch (error) {
+      console.warn(`Model ${modelName} failed:`, error?.message || error);
+    }
   }
+
+  // Graceful fallback so visitor always receives an accurate answer
+  return res.status(200).json({
+    answer: buildServerFallback(question, lang),
+    source: "knowledge-base",
+  });
 }
